@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="مجموعة صلاح التقنية (Salah Tech Group - STG) - الحلول التقنية المتكاملة، أنظمة مراقبة منصات حفر آبار النفط، أتمتة وقراءة أجهزة الـ PLC، برامج جباية الإيرادات الحكومية، ونظم إدارة نقاط البيع والأقساط. بإشراف المهندس باقر حيدر.">
+    <meta name="author" content="Eng. Baqer Hayder | Salah Tech Group">
+    <title>مجموعة صلاح التقنية | الحلول التقنية المتكاملة - STG</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800&family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- Tech Grid Animated Canvas -->
+    <canvas id="tech-canvas"></canvas>
+
+    <!-- Header Navigation -->
+    <header class="site-header">
+        <div class="container">
+            <div class="nav-wrap">
+                <!-- Brand Logo -->
+                <a href="#" class="brand-logo">
+                    <div class="logo-badge">
+                        <img src="assets/images/stg-logo.jpg" alt="Salah Tech Group STG Logo">
+                    </div>
+                    <div class="brand-titles">
+                        <span class="brand-title" data-i18n="brandTitle">مجموعة صلاح التقنية</span>
+                        <span class="brand-subtitle" data-i18n="brandSubtitle">الحلول التقنية المتكاملة - STG</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav Links -->
+                <nav class="main-nav">
+                    <a href="#hero" class="nav-link" data-i18n="navHome">الرئيسية</a>
+                    <a href="#solutions" class="nav-link" data-i18n="navSolutions">البرامج والحلول</a>
+                    <a href="#simulator" class="nav-link" data-i18n="navSimulator">المحاكي الحي</a>
+                    <a href="#features" class="nav-link" data-i18n="navFeatures">الميزات الهندسية</a>
+                    <a href="#partners" class="nav-link" data-i18n="navPartners">شركاؤنا في النجاح</a>
+                    <a href="#about" class="nav-link" data-i18n="navAbout">عن المجموعة</a>
+                    <a href="#contact" class="nav-link" data-i18n="navContact">اتصل بنا</a>
+                </nav>
+
+                <!-- Navigation Actions -->
+                <div class="nav-actions">
+                    <a href="https://www.instagram.com/stg.iq/" target="_blank" class="btn-icon-ig" title="حساب انستغرام الرسمي @stg.iq" data-i18n-title="navInstagramTitle" aria-label="Instagram">
+                        <svg width="17" height="17" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a5.108 5.108 0 1 0 0 10.216 5.108 5.108 0 0 0 0-10.216zm0 1.441a3.667 3.667 0 1 1 0 7.334 3.667 3.667 0 0 1 0-7.334z"/></svg>
+                    </a>
+                    <button class="btn-lang" id="btnLangToggle" title="تغيير اللغة / Switch Language">
+                        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                        <span>English</span>
+                    </button>
+                    <a href="tel:+9647810531340" class="btn-cta-nav">
+                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/></svg>
+                        <span data-i18n="btnCallNav">اتصال مباشر</span>
+                    </a>
+                    <button class="btn-menu-toggle" aria-label="Toggle Menu">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+        <div class="hero-glow-orb hero-glow-1"></div>
+        <div class="hero-glow-orb hero-glow-2"></div>
+
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text-block">
+                    <div class="hero-badge animate-glow">
+                        <span class="pulse-dot"></span>
+                        <span data-i18n="heroBadge">ريادة الحلول البرمجية والأنظمة الصناعية والمالية</span>
+                    </div>
+                    <h1 class="hero-title" data-i18n="heroTitle">
+                        تقنيات رقمية فائقة الدقة للقطاعات <span class="gradient-text">النفطية</span> والصناعية والتجارية
+                    </h1>
+                    <p class="hero-subtitle" data-i18n="heroSubtitle">
+                        مجموعة صلاح التقنية برئاسة المهندس باقر حيدر تقدم حزمة رائدة من البرمجيات المتخصصة: أنظمة مراقبة منصات حفر آبار النفط، أتمتة ومعايرة أجهزة الـ PLC، أنظمة جباية الإيرادات الحكومية، ونظم إدارة نقاط البيع والأقساط المتطورة.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#solutions" class="btn-primary">
+                            <span data-i18n="btnExplore">استعراض البرامج الجاهزة</span>
+                            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                        </a>
+                        <a href="https://wa.me/9647810531340" target="_blank" class="btn-whatsapp">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.655.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592d"/></svg>
+                            <span data-i18n="btnHeroWhatsapp">مراسلة واتساب فورية</span>
+                        </a>
+                        <a href="#contact" class="btn-secondary">
+                            <span data-i18n="btnRequestQuote">طلب استشارة أو عرض سعر</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Engineer & Organization Highlight Card -->
+                <div class="eng-profile-card">
+                    <div class="eng-header">
+                        <div class="eng-avatar">
+                            <img src="assets/images/stg-logo.jpg" alt="STG Developer">
+                        </div>
+                        <div class="eng-info">
+                            <h3 data-i18n="engTitle">المهندس باقر حيدر</h3>
+                            <p data-i18n="engRole">مؤسس وكبير مهندسي النظم والمطور</p>
+                            <span style="font-size:0.8rem; color:#94A3B8;" data-i18n="engCompany">Salah Tech Group - Technology Solutions</span>
+                        </div>
+                    </div>
+
+                    <div class="eng-contacts-list">
+                        <!-- Direct Phone 1 -->
+                        <div class="contact-item-pill">
+                            <div class="info-left">
+                                <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328z"/></svg>
+                                <span class="phone-number" dir="ltr"><bdi>+964 781 053 1340</bdi></span>
+                            </div>
+                            <a href="tel:+9647810531340" class="btn-icon-call" title="اتصال" data-i18n-title="engTooltipCall">
+                                <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h6zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H5z"/></svg>
+                            </a>
+                        </div>
+
+                        <!-- Direct Phone 2 -->
+                        <div class="contact-item-pill">
+                            <div class="info-left">
+                                <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328z"/></svg>
+                                <span class="phone-number" dir="ltr"><bdi>+964 780 000 6252</bdi></span>
+                            </div>
+                            <a href="tel:+9647800006252" class="btn-icon-call" title="اتصال" data-i18n-title="engTooltipCall">
+                                <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h6zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H5z"/></svg>
+                            </a>
+                        </div>
+
+                        <!-- Instagram stg.iq -->
+                        <div class="contact-item-pill">
+                            <div class="info-left">
+                                <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16" style="color: #E1306C;"><path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a5.108 5.108 0 1 0 0 10.216 5.108 5.108 0 0 0 0-10.216zm0 1.441a3.667 3.667 0 1 1 0 7.334 3.667 3.667 0 0 1 0-7.334z"/></svg>
+                                <span style="font-size:0.92rem; font-weight:700; color:#FFF;">stg.iq</span>
+                            </div>
+                            <a href="https://www.instagram.com/stg.iq/" target="_blank" class="btn-icon-ig" title="متابعة على انستغرام" data-i18n-title="engTooltipIg">
+                                <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a5.108 5.108 0 1 0 0 10.216 5.108 5.108 0 0 0 0-10.216zm0 1.441a3.667 3.667 0 1 1 0 7.334 3.667 3.667 0 0 1 0-7.334z"/></svg>
+                            </a>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="contact-item-pill">
+                            <div class="info-left">
+                                <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.708 2.825L15 11.105V5.383zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741zM1 11.105l4.708-2.897L1 5.383v5.722z"/></svg>
+                                <span style="font-size:0.85rem;">baqergg@gmail.com</span>
+                            </div>
+                            <a href="mailto:baqergg@gmail.com" class="btn-icon-call" title="مراسلة إلكترونية" data-i18n-title="engTooltipEmail">
+                                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div style="text-align: center;">
+                        <a href="#contact" class="btn-primary" style="width: 100%; justify-content: center; padding: 10px;">
+                            <span data-i18n="engBtnConsultation">طلب موعد استشارة وتجربة نظام</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Ribbon -->
+    <div class="stats-ribbon">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">+5</div>
+                    <div class="stat-label" data-i18n="statsSolutions">أنظمة برمجية جاهزة متخصصة</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label" data-i18n="statsReliability">موثوقية وتشفير حكومي محكم</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">PLC</div>
+                    <div class="stat-label" data-i18n="statsIndustrial">أتمتة صناعية و Modbus/TCP</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label" data-i18n="statsSupport">دعم فني واستشاري ميداني</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Software Products Section -->
+    <section class="section" id="solutions">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-i18n="softwareTag">الأنظمة والحلول الجاهزة</span>
+                <h2 class="section-title" data-i18n="softwareTitle">برمجيات متقدمة صُممت لتقود أعمالك نحو القمة</h2>
+                <p class="section-desc" data-i18n="softwareDesc">
+                    تستعرض مجموعة صلاح التقنية برامجها الجاهزة والمطورة بأحدث المعايير البرمجية لتلبي متطلبات قطاع النفط، المصانع، المؤسسات الحكومية، ومتاجر التجزئة.
+                </p>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="filter-tabs-wrapper">
+                <button class="filter-tab-btn active" data-filter="all" data-i18n="filterAll">جميع الأنظمة</button>
+                <button class="filter-tab-btn" data-filter="oil" data-i18n="filterOil">القطاع النفطي والصناعي</button>
+                <button class="filter-tab-btn" data-filter="plc" data-i18n="filterPLC">الأتمتة وقراءة الـ PLC</button>
+                <button class="filter-tab-btn" data-filter="gov" data-i18n="filterGov">الأنظمة المالية والحكومية</button>
+                <button class="filter-tab-btn" data-filter="erp" data-i18n="filterERP">المتاجر والأقساط POS</button>
+            </div>
+
+            <!-- Software Cards List -->
+            <div class="software-cards-grid">
+
+                <!-- 1. Rig Monitor System Suite (3 Programs) -->
+                <div class="software-card" data-category="oil">
+                    <div class="card-media" data-lightbox-src="assets/images/rig-monitor.jpg" data-lightbox-title="نظام اليمان لمراقبة منصات حفر آبار النفط (Rig Monitor System)" data-lightbox-desc="الشاشة الرئيسية لمركز القيادة على منصات الحفر النفطية لمراقبة ضغوط المضخات (SPP)، عزم الدوران (TRQ)، السرعة (RPM)، وأوزان الفأس والخطاف">
+                        <img src="assets/images/rig-monitor.jpg" alt="Rig Monitor System Suite">
+                        <div class="card-media-overlay">
+                            <span class="btn-zoom-preview">
+                                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35M11 8v6M8 11h6"/></svg>
+                                <span data-i18n="sys1PreviewOverlay">معاينة واجهات النظام (16+ شاشة تفاعلية)</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <span class="system-badge-tag tag-oil" data-i18n="sys1Tag">القطاع النفطي وحفر الآبار</span>
+                            <h3 class="system-title" data-i18n="sys1Title">1. حزمة اليمان لمراقبة منصات الحفر (Rig Monitor System)</h3>
+                            <p class="system-desc" data-i18n="sys1Desc">
+                                منظومة برمجية هندسية متكاملة تتكون من <strong>3 برامج متخصصة</strong> تعمل في بيئات منصات حفر آبار النفط، توفر مراقبة حية ولحظية لمعاملات الحفر الحساسة لضمان أعلى مستويات الأمان وسرعة اتخاذ القرار الميداني.
+                            </p>
+
+                            <div class="system-sub-suite">
+                                <div class="suite-title">
+                                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"/></svg>
+                                    <span data-i18n="sys1SuiteTitle">الحزمة تشمل 3 برامج متخصصة ومترابطة:</span>
+                                </div>
+                                <div class="suite-items">
+                                    <span class="suite-pill" data-i18n="sys1Pill1">1. Rig Monitor System (شاشة القيادة الميدانية)</span>
+                                    <span class="suite-pill" data-i18n="sys1Pill2">2. Rig Server (خادم ربط وتدفق البيانات الضخمة)</span>
+                                    <span class="suite-pill" data-i18n="sys1Pill3">3. Online Watch (المراقبة السحابية الحية عن بُعد)</span>
+                                </div>
+                            </div>
+
+                            <ul class="features-list">
+                                <li>
+                                    <span class="feature-check-icon">&#10003;</span>
+                                    <span data-i18n="sys1F1"><strong>مراقبة فورية (Real-Time):</strong> قراءة ضغط المضخات (SPP)، عزم الدوران (TRQ)، سرعة الدوران (RPM)، وحمل الخطاف.</span>
+                                </li>
+                                <li>
+                                    <span class="feature-check-icon">&#10003;</span>
+                                    <span data-i18n="sys1F2"><strong>إنذار مبكر للغازات الخطرة:</strong> مؤشرات حية لغاز H2S والغازات القابلة للاشتعال وحالة 10 خزانات طين.</span>
+                                </li>
+                                <li>
+                                    <span class="feature-check-icon">&#10003;</span>
+                                    <span data-i18n="sys1F3"><strong>تكامل الذكاء الاصطناعي (AI Co-Pilot):</strong> دعم هندسي لاتخاذ القرارات السليمة أثناء الحفر وتفادي الحوادث.</span>
+                                </li>
+                                <li>
+                                    <span class="feature-check-icon">&#10003;</span>
+                                    <span data-i18n="sys1F4"><strong>تتبع جغرافي ومراقبة عبر الويب:</strong> متابعة مستمرة لمنصات الحفر على الخريطة من غرفة العمليات الرئيسية.</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="card-actions">
+                            <a href="Rig Monitor System.html" target="_blank" class="btn-primary" style="padding: 10px 20px;">
+                                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+                                <span data-i18n="sys1BtnPresentation">عرض العرض التقديمي الشامل للنظام</span>
+                            </a>
+                            <button class="btn-secondary" data-lightbox-src="assets/images/rig-server.jpg" data-lightbox-title="Rigs Connection Broker (Rig Server)" data-lightbox-desc="الخادم المركزي لربط جميع الحفارات واستقبال القراءات في وقت واحد وإدارة تدفق البيانات الضخمة (Big Data)">
+                                <span data-i18n="sys1BtnServer">معاينة Rig Server</span>
+                            </button>
+                            <button class="btn-secondary" data-lightbox-src="assets/images/rig-online-watch.jpg" data-lightbox-title="Online Watch - المراقبة السحابية" data-lightbox-desc="شاشة المراقبة العالمية عن بُعد مع تتبع الخريطة والمخطط البياني اللحظي لقراءات الحفار">
+                                <span data-i18n="sys1BtnWatch">معاينة Online Watch</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Al-Mayan Integrated System (ERP & POS) -->
+                <div class="software-card card-reversed" data-category="erp">
+                    <div class="card-body">
+                        <div>
+                            <span class="system-badge-tag tag-erp" data-i18n="sys2Tag">المتاجر ونقاط البيع والأقساط</span>
+                            <h3 class="system-title" data-i18n="sys2Title">2. نظام الميان المتكامل (Al-Mayan ERP & POS)</h3>
+                            <p class="system-desc" data-i18n="sys2Desc">
+                                حل رقمي شامل لإدارة المتاجر العامة ومحلات البيع بالأقساط والمخازن. مزود بحزمة ضخمة من المعادلات الحسابية الدقيقة، كشوفات السيولة النقدية، وإدارة شاملة للموردين والزبائن.
+                            </p>
+
+                            <ul class="features-list">
+                                <li>
+                                    <span class="feature-check-icon">&#10003;</span>
+                                    <span data-i18n="sys2F1"><strong>نقاط بيع ذكية (POS):</strong> دعم الفواتير المتعددة، الباركود، الطابعات الحرارية، وشاشات الزبون الإضافية.</span>
+                                </li>
+                                <li>
+                                    <span class="feature-check-icon">&#10003;</span>
+                                    <span data-i18n="sys2F2"><strong>نظام أقساط حسابي متقدم:</strong> احتساب الفوائد، جدولة مواعيد السداد الشهرية، وتنبيهات فورية للأقساط المتأخرة.</span>
+                                </li>
+                                <li>
+                                    <span class="feature-check-icon">&#10003;</span>
+                                    <span data-i18n="sys2F3"><strong>خدمة البيع المباشر عبر الهاتف (Direct Sale):</strong> ربط سلة الزبون النشط مباشرة عبر رابط محلي وتأكيد الفاتورة.</span>
+                                </li>
+                                <li>
+                                    <span class="feature-check-icon">&#10003;</span>
+                                    <span data-i18n="sys2F4"><strong>لوحة تحكم إدارية وافية:</strong> إحصائيات السيولة النقدية المتوفرة، المبيعات اليومية، والمصاريف الخارجية وإنهاء الجلسات.</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="card-actions">
+                            <button class="btn-primary" data-lightbox-src="assets/images/mian-main-control.jpg" data-lightbox-title="نظام الميان المتكامل - لوحة التحكم (Mian-Main Control)" data-lightbox-desc="لوحة إدارة المبيعات، السيولة النقدية، الأقساط المتبقية، المخازن، التنبيهات، والتقارير المالية لنظام الميان">
+                                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35M11 8v6M8 11h6"/></svg>
+                                <span data-i18n="sys2BtnControl">معاينة لوحة التحكم (Mian-Main Control)</span>
+                            </button>
+                            <button class="btn-secondary" data-lightbox-src="assets/images/mian-direct-sale.jpg" data-lightbox-title="خدمة البيع المباشر عبر الهاتف (Mian Direct Sale)" data-lightbox-desc="شاشة سلة الزبون النشط وخدمة البيع المباشر وطباعة الفاتورة والدفع الإلكتروني والنقدي">
+                                <span data-i18n="sys2BtnDirect">معاينة البيع المباشر (Mian)</span>
+                            </button>
+                            <a href="#simulator" class="btn-secondary" onclick="document.querySelector('[data-target=\'pane-mayan\']').click()">
+                                <span data-i18n="sys2BtnCalc">حاسبة الأقساط</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-media" data-lightbox-src="assets/images/mian-main-control.jpg" data-lightbox-title="نظام الميان المتكامل (Mian-Main Control)" data-lightbox-desc="لوحة تحكم نظام الميان المتكامل للمتاجر والأقساط">
+                        <img src="assets/images/mian-main-control.jpg" alt="نظام الميان المتكامل">
+                        <div class="card-media-overlay">
+                            <span class="btn-zoom-preview">
+                                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35M11 8v6M8 11h6"/></svg>
+                                <span data-i18n="sys2PreviewOverlay">معاينة شاشات الميان (لوحة التحكم والبيع المباشر)</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Government Revenue System -->
+                <div class="software-card" data-category="gov">
+                    <div class="card-media" data-lightbox-src="assets/images/revenues.jpg" data-lightbox-title="نظام جباية الإيرادات الحكومية" data-lightbox-desc="واجهة قبض الرسوم والإيرادات الإلكترونية المعتمدة في دوائر الدولة (مثل وزارة الداخلية - دائرة الجنسية والإقامة) لإصدار الهويات، الوثائق، وتجديد البطاقة الموحدة">
+                        <img src="assets/images/revenues.jpg" alt="برنامج إيرادات الحكومي">
+                        <div class="card-media-overlay">
+                            <span class="btn-zoom-preview">
+                                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35M11 8v6M8 11h6"/></svg>
+                                <span data-i18n="sys3PreviewOverlay">معاينة نظام جباية الإيرادات الحكومية</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <span class="system-badge-tag tag-gov" data-i18n="sys3Tag">القطاع الحكومي والمؤسسات الرسمية</span>
+                            <h3 class="system-title" data-i18n="sys3Title">3. برنامج إيرادات (نظام جباية الإيرادات الحكومية)</h3>
+                            <p class="system-desc" data-i18n="sys3Desc">
+                                نظام مالي وأمني مؤتمت مخصص لدوائر الدولة والوزارات (مثل وزارة الداخلية - دائرة الجنسية والإقامة والدوائر الخدمية) لأتمتة عمليات قبض الرسوم وجباية الإيرادات بسلاسة ودون أخطاء بشرية.
+                            </p>
+
+                            <ul class="features-list">
+                                <li>
+                                    <span class="feature-check-icon">&#10003;</span>
+                                    <span data-i18n="sys3F1"><strong>عمليات قبض فورية وآمنة:</strong> إصدار الوصولات وتأكيد المقبوضات بلمسة واحدة لإنهاء الطوابير.</span>
+                                </li>
+                                <li>
+                                    <span class="feature-check-icon">&#10003;</span>
+                                    <span data-i18n="sys3F2"><strong>دعم الدفع الإلكتروني (POS):</strong> تكامل كامل مع بوابات الدفع الإلكتروني المصرفية ونقاط البيع والنقد.</span>
+                                </li>
+                                <li>
+                                    <span class="feature-check-icon">&#10003;</span>
+                                    <span data-i18n="sys3F3"><strong>حماية وتشفير عالي:</strong> منظومة صلاحيات دقيقة للموظفين ومدراء النظام لمنع أي تلاعب مالي.</span>
+                                </li>
+                                <li>
+                                    <span class="feature-check-icon">&#10003;</span>
+                                    <span data-i18n="sys3F4"><strong>كشوفات وجداول زمنية تفصيلية:</strong> جرد فوري للإيرادات حسب المناوبات، الأيام، وتصنيفات المعاملات (إصدار هوية، بطاقة موحدة، بدلات فاقد وتالف).</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="card-actions">
+                            <button class="btn-primary" data-lightbox-src="assets/images/revenues.jpg" data-lightbox-title="برنامج إيرادات الحكومي" data-lightbox-desc="شاشة جباية الإيرادات الحكومية - مثال عملي لوزارة الداخلية">
+                                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35M11 8v6M8 11h6"/></svg>
+                                <span data-i18n="sys3BtnPreview">معاينة واجهة الدوائر الحكومية</span>
+                            </button>
+                            <a href="#contact" class="btn-secondary">
+                                <span data-i18n="sys3BtnRequest">طلب تقديم النظام للجهات الرسمية</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Al-Razan PLC & Calibration Suite -->
+                <div class="software-card card-reversed" data-category="plc">
+                    <div class="card-body">
+                        <div>
+                            <span class="system-badge-tag tag-plc" data-i18n="sys4Tag">الأتمتة الصناعية وهندسة التحكم</span>
+                            <h3 class="system-title" data-i18n="sys4Title">4. برنامج الرزان (Al-Razan PLC & Calibration Suite)</h3>
+                            <p class="system-desc" data-i18n="sys4Desc">
+                                بيئة برمجية رائدة لقراءة سجلات أجهزة الـ PLC الصناعية وإجراء المعايرة الدقيقة. يتيح لأي مبرمج أو مطور بناء واجهات خاصة به والاتصال بالبرنامج عبر الشبكة المحلية للاستفادة الكاملة من القراءات الميدانية.
+                            </p>
+
+                            <ul class="features-list">
+                                <li>
+                                    <span class="feature-check-icon">&#10003;</span>
+                                    <span data-i18n="sys4F1"><strong>قراءة متزامنة لـ 50+ قناة:</strong> دعم سجلات الـ Holding Address (50 قناة)، Coil Address (50 قناة)، و Numeric Entry.</span>
+                                </li>
+                                <li>
+                                    <span class="feature-check-icon">&#10003;</span>
+                                    <span data-i18n="sys4F2"><strong>معايرة فائقة الدقة:</strong> معادلات رياضية وهندسية متطورة لتصحيح ومعايرة إشارات الحساسات المختلفة.</span>
+                                </li>
+                                <li>
+                                    <span class="feature-check-icon">&#10003;</span>
+                                    <span data-i18n="sys4F3"><strong>تكامل مفتوح للمطورين (API Docs):</strong> توثيق شامل وطرق اتصال مشروحة عبر LAN API Port 8080 و Modbus/TCP.</span>
+                                </li>
+                                <li>
+                                    <span class="feature-check-icon">&#10003;</span>
+                                    <span data-i18n="sys4F4"><strong>مسح واكتشاف الأجهزة (Discovery Scan):</strong> فحص تلقائي وسريع للشبكة لاكتشاف وحدات الـ PLC المتصلة.</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="card-actions">
+                            <button class="btn-primary" data-lightbox-src="assets/images/al-razan.jpg" data-lightbox-title="برنامج الرزان لقراءة ومعايرة أجهزة الـ PLC" data-lightbox-desc="بطاقة حول البرنامج وبيانات المطور المهندس باقر حيدر مع قنوات الـ Holding و Coil Addresses وإعدادات الاتصال الشبكي">
+                                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35M11 8v6M8 11h6"/></svg>
+                                <span data-i18n="sys4BtnPreview">معاينة واجهة برنامج الرزان</span>
+                            </button>
+                            <a href="#simulator" class="btn-secondary" onclick="document.querySelector('[data-target=\'pane-plc\']').click()">
+                                <span data-i18n="sys4BtnSim">محاكاة قنوات الـ PLC الحية</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-media" data-lightbox-src="assets/images/al-razan.jpg" data-lightbox-title="برنامج الرزان" data-lightbox-desc="واجهة برنامج الرزان لقراءة ومعايرة أجهزة الـ PLC">
+                        <img src="assets/images/al-razan.jpg" alt="برنامج الرزان">
+                        <div class="card-media-overlay">
+                            <span class="btn-zoom-preview">
+                                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35M11 8v6M8 11h6"/></svg>
+                                <span data-i18n="sys4PreviewOverlay">معاينة بطاقة وقنوات الرزان</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. Pressure Test System -->
+                <div class="software-card" data-category="oil">
+                    <div class="card-media" data-lightbox-src="assets/images/pressure-test.jpg" data-lightbox-title="برنامج اختبار الضغط (Pressure Test Report)" data-lightbox-desc="شاشة فحص الضغط الهيدروستاتيكي لمعدات الآبار (Double Ram) مع الرسم البياني اللحظي (Live Chart) وتصدير تقرير PDF معتمد">
+                        <img src="assets/images/pressure-test.jpg" alt="Pressure Test Report">
+                        <div class="card-media-overlay">
+                            <span class="btn-zoom-preview">
+                                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35M11 8v6M8 11h6"/></svg>
+                                <span data-i18n="sys5PreviewOverlay">معاينة واجهة اختبار الضغط والتقرير</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <span class="system-badge-tag tag-oil" data-i18n="sys5Tag">القطاع النفطي والفحص الهندسي</span>
+                            <h3 class="system-title" data-i18n="sys5Title">5. برنامج اختبار الضغط (Pressure Test Report)</h3>
+                            <p class="system-desc" data-i18n="sys5Desc">
+                                برنامج هندسي متخصص في فحص واختبار ضغوط المضخات ومعدات الآبار (BOP Double Ram, Casing, Valves)، يقدم قراءة حية ومباشرة مع رسم بياني لحظي وتوليد تقارير رسمية جاهزة للطباعة وحفظ PDF.
+                            </p>
+
+                            <ul class="features-list">
+                                <li>
+                                    <span class="feature-check-icon">&#10003;</span>
+                                    <span data-i18n="sys5F1"><strong>رسم بياني حي (Live Chart):</strong> متابعة مسار الضغط بالـ PSI ثانية بثانية لكشف أي هبوط أو تسريب هيدروليكي فوراً.</span>
+                                </li>
+                                <li>
+                                    <span class="feature-check-icon">&#10003;</span>
+                                    <span data-i18n="sys5F2"><strong>تقارير هندسية معتمدة:</strong> توليد تقرير فحص كامل بضغطة زر يتضمن بيانات المعدة، المشغل، والضغوط المقاسة.</span>
+                                </li>
+                                <li>
+                                    <span class="feature-check-icon">&#10003;</span>
+                                    <span data-i18n="sys5F3"><strong>حفظ مباشر بصيغة PDF والطباعة:</strong> أرشفة رقمية سريعة وطباعة فورية لمهندسي الفحص الميداني.</span>
+                                </li>
+                                <li>
+                                    <span class="feature-check-icon">&#10003;</span>
+                                    <span data-i18n="sys5F4"><strong>دقة هيدروستاتيكية عالية:</strong> دعم اختبارات الضغط العالي (5000 PSI, 10000 PSI) وتوثيق مدة الاستقرار.</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="card-actions">
+                            <a href="#simulator" class="btn-primary" onclick="document.querySelector('[data-target=\'pane-pressure\']').click()" style="padding: 10px 20px;">
+                                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                                <span data-i18n="sys5BtnSim">تشغيل محاكي فحص الضغط الحي</span>
+                            </a>
+                            <button class="btn-secondary" data-lightbox-src="assets/images/pressure-test.jpg" data-lightbox-title="تقرير فحص الضغط" data-lightbox-desc="استعراض جدول تفاصيل الجهاز والرسم البياني وأزرار الحفظ">
+                                <span data-i18n="sys5BtnSample">معاينة نموذج التقرير</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Software Simulators Playground -->
+    <section class="section simulator-section" id="simulator">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-i18n="simTag">تجربة تفاعلية مباشرة</span>
+                <h2 class="section-title" data-i18n="simTitle">مختبر المحاكاة البرمجية الحية</h2>
+                <p class="section-desc" data-i18n="simDesc">
+                    اختبر بنفسك الدقة البرمجية والتحكم اللحظي لأنظمة مجموعة صلاح التقنية من خلال هذه المحاكيات التفاعلية.
+                </p>
+            </div>
+
+            <div class="simulator-box">
+                <!-- Navigation Tabs -->
+                <div class="simulator-nav">
+                    <button class="sim-nav-btn active" data-target="pane-pressure">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+                        <span data-i18n="simTabPressure">محاكي اختبار الضغط (Pressure Test)</span>
+                    </button>
+                    <button class="sim-nav-btn" data-target="pane-plc">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+                        <span data-i18n="simTabPLC">محاكي قنوات الرزان (PLC Monitor)</span>
+                    </button>
+                    <button class="sim-nav-btn" data-target="pane-mayan">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+                        <span data-i18n="simTabMayan">حاسبة أقساط ونقاط بيع الميان</span>
+                    </button>
+                </div>
+
+                <!-- Pane 1: Pressure Test Simulator -->
+                <div class="sim-content-pane active" id="pane-pressure">
+                    <div class="sim-grid-layout">
+                        <div>
+                            <div class="sim-chart-container">
+                                <canvas id="pressureCanvas" class="sim-chart-canvas"></canvas>
+                            </div>
+                            <div class="sim-readouts">
+                                <div class="readout-card">
+                                    <div class="readout-label" data-i18n="simReadoutPsi">الضغط المقاس اللحظي (PSI)</div>
+                                    <div class="readout-value" id="simCurrentPsi">0 PSI</div>
+                                </div>
+                                <div class="readout-card">
+                                    <div class="readout-label" data-i18n="simReadoutDuration">المدة الزمنية للاختبار</div>
+                                    <div class="readout-value" id="simTestTime">00:00:00.0</div>
+                                </div>
+                                <div class="readout-card" style="grid-column: span 2;">
+                                    <div class="readout-label" data-i18n="simReadoutStatus">حالة الفحص الهيدروستاتيكي</div>
+                                    <div class="readout-value" id="simTestStatus" style="font-size: 1.1rem; color: #94A3B8;">جاهز لبدء الفحص (Ready)</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="sim-ctrl-panel">
+                            <h4 style="color: var(--gold-light); margin-bottom: 16px;" data-i18n="simCtrlTitle">لوحة تحكم الفحص</h4>
+                            <div class="form-group">
+                                <label class="form-label" data-i18n="simLabelTestedTool">المعدة المفحوصة</label>
+                                <input type="text" class="form-control" value="Double Ram BOP 13 5/8&quot; 5K" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" data-i18n="simLabelTargetPsi">ضغط الاختبار المستهدف (Test Pressure)</label>
+                                <input type="text" class="form-control" value="5,000 PSI (Hydrostatic)" readonly>
+                            </div>
+                            <div style="display: flex; gap: 10px; margin-top: 24px;">
+                                <button class="btn-primary" id="btnStartPressure" style="flex: 1; justify-content: center;">
+                                    <span data-i18n="simBtnStart">بدء الفحص (Start)</span>
+                                </button>
+                                <button class="btn-secondary" id="btnStopPressure" disabled style="flex: 1; justify-content: center;">
+                                    <span data-i18n="simBtnStop">إيقاف (Stop)</span>
+                                </button>
+                                <button class="btn-secondary" id="btnResetPressure" style="justify-content: center;">
+                                    <span data-i18n="simBtnReset">إعادة ضبط</span>
+                                </button>
+                            </div>
+                            <p style="font-size: 0.82rem; color: var(--text-muted); margin-top: 15px; line-height: 1.5;" data-i18n="simNotePressure">
+                                * يقوم البرنامج الحقيقي بتسجيل هذه البيانات في ملف PDF رسمي يحمل شعار وتوقيع المهندس الفاحص.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pane 2: Al-Razan PLC Simulator -->
+                <div class="sim-content-pane" id="pane-plc">
+                    <div class="sim-grid-layout">
+                        <div>
+                            <h4 style="margin-bottom: 15px; color: var(--cyan-light);" data-i18n="simPlcChannelsTitle">قنوات سجلات الـ PLC (Holding Address 50 Channels)</h4>
+                            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 20px;">
+                                <div class="readout-card">
+                                    <div class="readout-label">Holding Ch 1 (RPM)</div>
+                                    <div class="readout-value plc-channel-val">0</div>
+                                </div>
+                                <div class="readout-card">
+                                    <div class="readout-label">Holding Ch 2 (Torque)</div>
+                                    <div class="readout-value plc-channel-val">0</div>
+                                </div>
+                                <div class="readout-card">
+                                    <div class="readout-label">Holding Ch 3 (SPP)</div>
+                                    <div class="readout-value plc-channel-val">0</div>
+                                </div>
+                                <div class="readout-card">
+                                    <div class="readout-label">Holding Ch 4 (Flow)</div>
+                                    <div class="readout-value plc-channel-val">0</div>
+                                </div>
+                                <div class="readout-card">
+                                    <div class="readout-label">Holding Ch 5 (Tank Level)</div>
+                                    <div class="readout-value plc-channel-val">0</div>
+                                </div>
+                                <div class="readout-card">
+                                    <div class="readout-label">Holding Ch 6 (H2S Sensor)</div>
+                                    <div class="readout-value plc-channel-val">0</div>
+                                </div>
+                            </div>
+
+                            <div class="readout-card">
+                                <div class="readout-label" data-i18n="simPlcCalibTitle">معايرة حية لقيمة حساسة (Calibration Calculation)</div>
+                                <div style="display: flex; align-items: center; gap: 15px; margin-top: 10px;">
+                                    <input type="range" id="plcRawInput" min="0" max="1023" value="450" style="flex: 1;">
+                                    <span id="plcCalibratedVal" style="font-weight: 800; color: var(--gold-primary); font-size: 1.2rem;">124.50 BAR</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="sim-ctrl-panel">
+                            <h4 style="color: var(--gold-light); margin-bottom: 16px;" data-i18n="simPlcNetTitle">إعدادات الاتصال بالشبكة</h4>
+                            <div class="form-group">
+                                <label class="form-label" data-i18n="simPlcLabelIp">بروتوكول وعنوان الـ PLC IP</label>
+                                <input type="text" class="form-control" id="plcHost" value="192.168.1.100:502 [TCP]" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" data-i18n="simPlcLabelPort">بوابة واجهة برمجة التطبيقات (LAN API Port)</label>
+                                <input type="text" class="form-control" id="plcPort" value="LAN API Port 8080 (0 Clients)" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" data-i18n="simPlcLabelStatus">حالة الاتصال</label>
+                                <div id="plcStatusIndicator" style="padding: 8px 14px; background: rgba(255,255,255,0.05); border-radius: 4px; font-weight: 700; color: #FB7185;">
+                                    غير متصل (DISCONNECTED)
+                                </div>
+                            </div>
+                            <button class="btn-primary" id="btnPlcConnect" style="width: 100%; justify-content: center; margin-top: 10px;">
+                                <span data-i18n="simBtnPlcConnect">اتصال بالـ PLC (Connect)</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pane 3: Al-Mayan Calculator -->
+                <div class="sim-content-pane" id="pane-mayan">
+                    <div class="sim-grid-layout">
+                        <div class="sim-ctrl-panel">
+                            <h4 style="color: var(--gold-light); margin-bottom: 16px;" data-i18n="simMayanInputTitle">مدخلات فاتورة الأقساط</h4>
+                            <div class="form-group">
+                                <label class="form-label" data-i18n="simMayanLabelTotal">المبلغ الإجمالي للبضاعة (دينار عراقي)</label>
+                                <input type="number" class="form-control" id="posTotalAmount" value="1500000" step="50000">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" data-i18n="simMayanLabelDown">المقدمة / الدفعة النقدية الأولى (دينار عراقي)</label>
+                                <input type="number" class="form-control" id="posDownPayment" value="300000" step="25000">
+                            </div>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                                <div class="form-group">
+                                    <label class="form-label" data-i18n="simMayanLabelMonths">مدة التقسيط (أشهر)</label>
+                                    <input type="number" class="form-control" id="posMonths" value="12" min="1" max="60">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" data-i18n="simMayanLabelProfit">نسبة الربح السنوية (%)</label>
+                                    <input type="number" class="form-control" id="posProfitRate" value="10" min="0" max="100">
+                                </div>
+                            </div>
+                            <button class="btn-primary" id="btnCalculateMayan" style="width: 100%; justify-content: center; margin-top: 10px;">
+                                <span data-i18n="simMayanBtnCalc">احتساب جدول الأقساط والأرباح</span>
+                            </button>
+                        </div>
+
+                        <div>
+                            <h4 style="margin-bottom: 15px; color: var(--gold-light);" data-i18n="simMayanOutputTitle">المخرجات الحسابية لنظام الميان</h4>
+                            <div style="display: flex; flex-direction: column; gap: 14px;">
+                                <div class="readout-card">
+                                    <div class="readout-label" data-i18n="simMayanOutRemaining">المبلغ المتبقي بعد المقدمة</div>
+                                    <div class="readout-value" id="outRemainingPrincipal">1,200,000 د.ع</div>
+                                </div>
+                                <div class="readout-card">
+                                    <div class="readout-label" data-i18n="simMayanOutProfit">إجمالي الأرباح المضافة</div>
+                                    <div class="readout-value" id="outTotalProfit">120,000 د.ع</div>
+                                </div>
+                                <div class="readout-card">
+                                    <div class="readout-label" data-i18n="simMayanOutTotal">المجموع الكلي مع الأرباح</div>
+                                    <div class="readout-value" id="outTotalWithProfit">1,320,000 د.ع</div>
+                                </div>
+                                <div class="readout-card" style="border-color: var(--gold-primary); background: rgba(212,175,55,0.08);">
+                                    <div class="readout-label" style="color: var(--gold-light); font-weight: 700;" data-i18n="simMayanOutMonthly">القسط الشهري المستحق</div>
+                                    <div class="readout-value" id="outMonthlyInstallment" style="color: #FFF; font-size: 1.6rem;">110,000 د.ع / شهر</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Engineering Features & Why Choose Us -->
+    <section class="section" id="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-i18n="whyTag">المعايير الهندسية</span>
+                <h2 class="section-title" data-i18n="whyTitle">لماذا تعتمد المؤسسات على مجموعة صلاح التقنية؟</h2>
+                <p class="section-desc" data-i18n="whyDesc">
+                    نجمع بين عمق الخبرة الهندسية في الأجهزة الميدانية والقدرات البرمجية المتقدمة لتقديم أنظمة حقيقية تلبي متطلبات الأعمال الأكثر تعقيداً.
+                </p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-box">
+                    <div class="feature-icon-wrap">
+                        <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <h4 data-i18n="feat1Title">أمان وتشفير بمستوى حكومي</h4>
+                    <p data-i18n="feat1Desc">صُممت أنظمتنا بأعلى معايير الحماية الرقمية والتدقيق المالي وإدارة الصلاحيات لحماية بيانات المؤسسات من أي اختراق أو عبث.</p>
+                </div>
+
+                <div class="feature-box">
+                    <div class="feature-icon-wrap">
+                        <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                    </div>
+                    <h4 data-i18n="feat2Title">سرعة واستجابة في الوقت الفعلي</h4>
+                    <p data-i18n="feat2Desc">معالجة فورية لقراءات الحساسات، تدفق بيانات الحفارات والـ PLC، وإصدار الوصولات بلمح البصر دون أي بطء أو تأخير.</p>
+                </div>
+
+                <div class="feature-box">
+                    <div class="feature-icon-wrap">
+                        <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+                    </div>
+                    <h4 data-i18n="feat3Title">واجهات برمجية مفتوحة (APIs)</h4>
+                    <p data-i18n="feat3Desc">إمكانية ربط برامجنا مع أي أنظمة أخرى أو واجهات خارجية عبر LAN APIs و Modbus TCP مع توثيق برمجي كامل للمطورين.</p>
+                </div>
+
+                <div class="feature-box">
+                    <div class="feature-icon-wrap">
+                        <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+                    </div>
+                    <h4 data-i18n="feat4Title">تحمل البيئات الميدانية القاسية</h4>
+                    <p data-i18n="feat4Desc">تم اختبار واعتماد برامجنا للعمل على منصات حفر آبار النفط وفي المصانع والمواقع النائية مع استقرار دائم 100%.</p>
+                </div>
+
+                <div class="feature-box">
+                    <div class="feature-icon-wrap">
+                        <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                    </div>
+                    <h4 data-i18n="feat5Title">تقارير PDF وكشوفات معتمدة</h4>
+                    <p data-i18n="feat5Desc">توليد تقارير هندسية ومالية فورية جاهزة للطباعة والأرشفة، تدعم الرسوم البيانية والجداول التفصيلية الدقيقة.</p>
+                </div>
+
+                <div class="feature-box">
+                    <div class="feature-icon-wrap">
+                        <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    </div>
+                    <h4 data-i18n="feat6Title">إشراف هندسي ودعم مباشر</h4>
+                    <p data-i18n="feat6Desc">متابعة وتحديث مستمر بإشراف المهندس باقر حيدر لضمان تلبية كافة احتياجات العميل وتدريب فرق العمل.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners in Success Section -->
+    <section class="section partners-section" id="partners">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-i18n="partnersTag">شركاؤنا في النجاح</span>
+                <h2 class="section-title" data-i18n="partnersTitle">شركاء النجاح والثقة المتبادلة</h2>
+                <p class="section-desc" data-i18n="partnersDesc">
+                    نعتز بثقة نخبة من كبرى الشركات والمؤسسات والمحلات التجارية التي اعتمدت على أنظمتنا البرمجية وحلولنا الرقمية لتحقيق الريادة والكفاءة العالية في أعمالها.
+                </p>
+            </div>
+
+            <div class="partners-grid">
+                <!-- Partner 1: شركة مخابز كربلاء -->
+                <div class="partner-card">
+                    <div class="partner-logo-box" data-lightbox-src="assets/images/partner-kbc.jpg" data-lightbox-title="شركة مخابز كربلاء (KBC)" data-lightbox-desc="شركة مخابز كربلاء - العنوان: كربلاء حولي سيد جودة عامود 13550">
+                        <img src="assets/images/partner-kbc.jpg" alt="شركة مخابز كربلاء KBC">
+                    </div>
+                    <h3 class="partner-name" data-i18n="partner1Name">شركة مخابز كربلاء (KBC)</h3>
+                    <span class="partner-category-pill" data-i18n="partner1Cat">الصناعات الغذائية والمخابز الآلية</span>
+                    <div class="partner-address">
+                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>
+                        <span data-i18n="partner1Address">كربلاء حولي سيد جودة - عامود 13550</span>
+                    </div>
+                </div>
+
+                <!-- Partner 2: محلات أبو تراب للأجهزة المنزلية -->
+                <div class="partner-card">
+                    <div class="partner-logo-box" data-lightbox-src="assets/images/partner-abutorab.jpg" data-lightbox-title="محلات أبو تراب للأجهزة المنزلية" data-lightbox-desc="محلات أبو تراب - برنامج البيع بالتقسيط لكافة الأجهزة الكهربائية - العنوان: كربلاء - الجمعية">
+                        <img src="assets/images/partner-abutorab.jpg" alt="محلات أبو تراب للأجهزة المنزلية">
+                    </div>
+                    <h3 class="partner-name" data-i18n="partner2Name">محلات أبو تراب للأجهزة المنزلية</h3>
+                    <span class="partner-category-pill" data-i18n="partner2Cat">الأجهزة الكهربائية ونظام التقسيط (POS)</span>
+                    <div class="partner-address">
+                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>
+                        <span data-i18n="partner2Address">كربلاء - الجمعية</span>
+                    </div>
+                </div>
+
+                <!-- Partner 3: شركة العجلان للنقل العام والخدمات النفطية -->
+                <div class="partner-card">
+                    <div class="partner-logo-box" data-lightbox-src="assets/images/partner-ajlan.jpg" data-lightbox-title="شركة العجلان للنقل العام والخدمات النفطية (AOS AL-AJLAN)" data-lightbox-desc="شركة العجلان للنقل العام والخدمات النفطية - أبراج العجلان - العنوان: بغداد الكرادة شارع الصناعة محلة 906-46">
+                        <img src="assets/images/partner-ajlan.jpg" alt="شركة العجلان للنقل العام والخدمات النفطية">
+                    </div>
+                    <h3 class="partner-name" data-i18n="partner3Name">شركة العجلان للنقل والخدمات النفطية</h3>
+                    <span class="partner-category-pill" data-i18n="partner3Cat">الخدمات النفطية والنقل العام - أبراج العجلان</span>
+                    <div class="partner-address">
+                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>
+                        <span data-i18n="partner3Address">بغداد - الكرادة - شارع الصناعة - محلة 906-46</span>
+                    </div>
+                </div>
+
+                <!-- Partner 4: مكتب فلاش لأكسسوارات الهواتف المحمولة -->
+                <div class="partner-card">
+                    <div class="partner-logo-box" data-lightbox-src="assets/images/partner-flash.jpg" data-lightbox-title="مكتب فلاش لأكسسوارات الهواتف المحمولة (FLASH)" data-lightbox-desc="مكتب فلاش - إلكترونيات وأكسسوارات الهواتف المحمولة - العنوان: كربلاء - الجمعية">
+                        <img src="assets/images/partner-flash.jpg" alt="مكتب فلاش لأكسسوارات الهواتف المحمولة">
+                    </div>
+                    <h3 class="partner-name" data-i18n="partner4Name">مكتب فلاش لأكسسوارات الهواتف</h3>
+                    <span class="partner-category-pill" data-i18n="partner4Cat">إلكترونيات وملحقات الهواتف المحمولة</span>
+                    <div class="partner-address">
+                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>
+                        <span data-i18n="partner4Address">كربلاء - الجمعية</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about" style="background: rgba(9, 13, 24, 0.5);">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 50px; align-items: center;">
+                <div>
+                    <div class="logo-badge" style="width: 100%; height: auto; aspect-ratio: 16/9; max-width: 480px; margin: 0 auto; box-shadow: 0 20px 60px rgba(0,0,0,0.8);">
+                        <img src="assets/images/stg-logo.jpg" alt="Salah Tech Group Branding" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                </div>
+
+                <div>
+                    <span class="section-tag" data-i18n="aboutTag">عن المجموعة</span>
+                    <h2 class="section-title" data-i18n="aboutTitle">مجموعة صلاح التقنية (STG)</h2>
+                    <p style="color: var(--text-sub); line-height: 1.8; margin-bottom: 20px; font-size: 1.05rem;" data-i18n="aboutLead">
+                        كيان تقني وهندسي متخصص في تطوير البرمجيات المعقدة والحلول الرقمية الذكية، يجمع بين علوم البرمجة الحديثة وهندسة الأتمتة الصناعية والنفطية.
+                    </p>
+                    <p style="color: var(--text-muted); line-height: 1.8; margin-bottom: 25px;" data-i18n="aboutBody">
+                        بقيادة <strong>المهندس باقر حيدر</strong>، نجحت المجموعة في ابتكار برمجيات حيوية تعمل في الميدان النفطي (منصات حفر الآبار وفحوصات الضغط)، الأتمتة الصناعية (قراءة ومعايرة أجهزة الـ PLC)، المؤسسات الحكومية (أنظمة جباية الإيرادات)، والقطاع التجاري (أنظمة المتاجر والأقساط).
+                    </p>
+
+                    <div style="display: flex; flex-wrap: wrap; gap: 15px;">
+                        <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-gold); padding: 12px 20px; border-radius: 8px;">
+                            <span style="display: block; font-size: 0.8rem; color: var(--gold-light);" data-i18n="aboutFounderLabel">المؤسس والمطور</span>
+                            <strong style="font-size: 1.1rem; color: #FFF;" data-i18n="aboutFounderValue">المهندس باقر حيدر</strong>
+                        </div>
+                        <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-cyan); padding: 12px 20px; border-radius: 8px;">
+                            <span style="display: block; font-size: 0.8rem; color: var(--cyan-light);" data-i18n="aboutSpecLabel">مجال التخصص</span>
+                            <strong style="font-size: 1.1rem; color: #FFF;" data-i18n="aboutSpecValue">تكنولوجيا المعلومات والحلول الرقمية</strong>
+                        </div>
+                        <div class="card-ai-spec" style="flex-basis: 100%;">
+                            <span style="display: block; font-size: 0.8rem; color: #C084FC; margin-bottom: 3px;" data-i18n="aboutAiLabel">تقنيات الذكاء الاصطناعي</span>
+                            <strong style="font-size: 1.05rem; color: #FFF;" data-i18n="aboutAiValue">استخدام وتطوير الذكاء الاصطناعي في البرامج والأنظمة</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Inquiries Section -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-i18n="contactTag">تواصل مباشر</span>
+                <h2 class="section-title" data-i18n="contactTitle">جاهزون لنقل أعمالك إلى العصر الرقمي</h2>
+                <p class="section-desc" data-i18n="contactDesc">
+                    تواصل مباشرة مع المهندس باقر حيدر للحصول على استشارة فنية، طلب نسخة تجريبية، أو تجهيز عرض سعر خاص بمؤسستك.
+                </p>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Direct Contact Info -->
+                <div class="contact-info-cards">
+                    <div class="contact-direct-card">
+                        <h3 data-i18n="contactDirectTitle">قنوات التواصل المباشر</h3>
+                        <p data-i18n="contactDirectDesc">يسعدنا الرد على استفساراتكم ومناقشة تفاصيل الأنظمة في أي وقت:</p>
+
+                        <div class="phone-badge-group">
+                            <!-- Phone 1 -->
+                            <div class="phone-action-card">
+                                <div>
+                                    <div style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 2px;" data-i18n="contactPhone1Label">الخط الرئيسي والمهندس باقر حيدر</div>
+                                    <div class="phone-num" dir="ltr"><bdi>+964 781 053 1340</bdi></div>
+                                </div>
+                                <div class="phone-btns">
+                                    <a href="tel:+9647810531340" class="btn-pill-call">
+                                        <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/></svg>
+                                        <span data-i18n="btnCall">اتصال</span>
+                                    </a>
+                                    <a href="https://wa.me/9647810531340" target="_blank" class="btn-pill-wa">
+                                        <span data-i18n="btnWhatsapp">واتساب</span>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Phone 2 -->
+                            <div class="phone-action-card">
+                                <div>
+                                    <div style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 2px;" data-i18n="contactPhone2Label">الخط الإضافي</div>
+                                    <div class="phone-num" dir="ltr"><bdi>+964 780 000 6252</bdi></div>
+                                </div>
+                                <div class="phone-btns">
+                                    <a href="tel:+9647800006252" class="btn-pill-call">
+                                        <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/></svg>
+                                        <span data-i18n="btnCall">اتصال</span>
+                                    </a>
+                                    <a href="https://wa.me/9647800006252" target="_blank" class="btn-pill-wa">
+                                        <span data-i18n="btnWhatsapp">واتساب</span>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Instagram Channel -->
+                            <div class="phone-action-card" style="border-color: rgba(220, 39, 67, 0.4); background: rgba(220, 39, 67, 0.05);">
+                                <div>
+                                    <div style="font-size: 0.8rem; color: #F472B6; margin-bottom: 2px;" data-i18n="contactIgLabel">الحساب الرسمي على انستغرام</div>
+                                    <div class="phone-num" style="font-family: inherit; font-size: 1.05rem; color: #FFF;">@stg.iq</div>
+                                </div>
+                                <div class="phone-btns">
+                                    <a href="https://www.instagram.com/stg.iq/" target="_blank" class="btn-pill-ig">
+                                        <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a5.108 5.108 0 1 0 0 10.216 5.108 5.108 0 0 0 0-10.216zm0 1.441a3.667 3.667 0 1 1 0 7.334 3.667 3.667 0 0 1 0-7.334z"/></svg>
+                                        <span data-i18n="btnFollowIg">متابعة وتواصل</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Email Addresses -->
+                        <div style="margin-top: 25px;">
+                            <h4 style="font-size: 1rem; color: var(--gold-light); margin-bottom: 12px;" data-i18n="contactEmailsTitle">عناوين البريد الإلكتروني الرسمية:</h4>
+                            <div style="display: flex; flex-direction: column; gap: 8px;">
+                                <a href="mailto:baqergg@gmail.com" class="contact-item-pill" style="padding: 8px 14px;">
+                                    <span style="color: var(--cyan-light);">baqergg@gmail.com</span>
+                                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.708 2.825L15 11.105V5.383zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741zM1 11.105l4.708-2.897L1 5.383v5.722z"/></svg>
+                                </a>
+                                <a href="mailto:baqergg@outlook.com" class="contact-item-pill" style="padding: 8px 14px;">
+                                    <span style="color: var(--cyan-light);">baqergg@outlook.com</span>
+                                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.708 2.825L15 11.105V5.383zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741zM1 11.105l4.708-2.897L1 5.383v5.722z"/></svg>
+                                </a>
+                                <a href="mailto:baqergg@yahoo.com" class="contact-item-pill" style="padding: 8px 14px;">
+                                    <span style="color: var(--cyan-light);">baqergg@yahoo.com</span>
+                                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.708 2.825L15 11.105V5.383zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741zM1 11.105l4.708-2.897L1 5.383v5.722z"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Inquiry Form -->
+                <div class="contact-form-box">
+                    <h3 data-i18n="formTitle">أرسل استفسارك أو اطلب عرض سعر</h3>
+                    <p data-i18n="formDesc">قم بملء النموذج التالي وسيتم تحويل رسالتك مباشرة إلى واتساب المهندس باقر حيدر للرد السريع:</p>
+
+                    <form id="inquiryForm">
+                        <div class="form-group">
+                            <label class="form-label" for="clientName" data-i18n="formLabelName">الاسم الكريم أو اسم المؤسسة *</label>
+                            <input type="text" class="form-control" id="clientName" placeholder="أدخل اسمك أو اسم الشركة" data-i18n-placeholder="formPlaceholderName" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="clientPhone" data-i18n="formLabelPhone">رقم الهاتف أو الواتساب *</label>
+                            <input type="tel" class="form-control" id="clientPhone" placeholder="+964 78X XXX XXXX" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="targetSystem" data-i18n="formLabelSystem">البرنامج أو الحل المطلوب *</label>
+                            <select class="form-control" id="targetSystem" required>
+                                <option value="نظام اليمان لمراقبة منصات حفر آبار النفط (Rig Monitor System)" data-i18n="optSys1">1. نظام اليمان لمراقبة منصات حفر آبار النفط (Rig Monitor System Suite)</option>
+                                <option value="نظام الميان المتكامل (المتاجر ونقاط البيع والأقساط)" data-i18n="optSys2">2. نظام الميان المتكامل (POS ومحلات الأقساط والمخازن)</option>
+                                <option value="برنامج إيرادات الحكومي (نظام جباية إلكتروني)" data-i18n="optSys3">3. برنامج إيرادات (نظام جباية الإيرادات الحكومية)</option>
+                                <option value="برنامج الرزان لقراءة ومعايرة أجهزة الـ PLC" data-i18n="optSys4">4. برنامج الرزان (PLC & Calibration Suite)</option>
+                                <option value="برنامج اختبار الضغط (Pressure Test Report)" data-i18n="optSys5">5. برنامج اختبار الضغط (Pressure Test Report)</option>
+                                <option value="استشارة برمجية أو نظام خاص حسب الطلب" data-i18n="optSys6">استشارة عامة أو تصميم نظام خاص مخصص</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="clientNotes" data-i18n="formLabelNotes">تفاصيل الاستفسار أو متطلبات العمل</label>
+                            <textarea class="form-control" id="clientNotes" rows="4" placeholder="اكتب نبذة عن احتياجاتك أو عدد التراخيص والمواقع المطلوبة..." data-i18n-placeholder="formPlaceholderNotes"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-primary" style="width: 100%; justify-content: center;">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326z"/></svg>
+                            <span data-i18n="btnSendMsg">إرسال الاستفسار عبر واتساب</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="brand-logo">
+                        <div class="logo-badge">
+                            <img src="assets/images/stg-logo.jpg" alt="STG Logo">
+                        </div>
+                        <div class="brand-titles">
+                            <span class="brand-title" data-i18n="brandTitle">مجموعة صلاح التقنية</span>
+                            <span class="brand-subtitle" data-i18n="brandSubtitle">الحلول التقنية المتكاملة - STG</span>
+                        </div>
+                    </div>
+                    <p data-i18n="footerDesc">
+                        ريادة الحلول الرقمية وهندسة النظم الذكية في مجالات النفط والغاز، الأتمتة الصناعية، المؤسسات الحكومية، والحلول المصرفية ونقاط البيع.
+                    </p>
+                </div>
+
+                <div class="footer-col">
+                    <h4 data-i18n="footerColSystems">البرامج الجاهزة</h4>
+                    <ul class="footer-links">
+                        <li><a href="#solutions" data-i18n="footerSys1">حزمة اليمان لحفر الآبار (RMS)</a></li>
+                        <li><a href="#solutions" data-i18n="footerSys2">نظام الميان المتكامل (POS & ERP)</a></li>
+                        <li><a href="#solutions" data-i18n="footerSys3">برنامج إيرادات الحكومي</a></li>
+                        <li><a href="#solutions" data-i18n="footerSys4">برنامج الرزان لأجهزة الـ PLC</a></li>
+                        <li><a href="#solutions" data-i18n="footerSys5">برنامج اختبار الضغط (Pressure Test)</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 data-i18n="footerColLinks">روابط سريعة</h4>
+                    <ul class="footer-links">
+                        <li><a href="#hero" data-i18n="footerLinkHome">الرئيسية</a></li>
+                        <li><a href="#simulator" data-i18n="footerLinkSim">المحاكي البرمجي الحي</a></li>
+                        <li><a href="#features" data-i18n="footerLinkFeat">الميزات الهندسية والأمان</a></li>
+                        <li><a href="#about" data-i18n="footerLinkAbout">عن المهندس باقر حيدر</a></li>
+                        <li><a href="Rig Monitor System.html" target="_blank" data-i18n="footerLinkSlides">عرض منصات الحفر (Rig Slides)</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 data-i18n="footerColContact">المطور والاتصال</h4>
+                    <ul class="footer-links">
+                        <li><strong style="color: #FFF;" data-i18n="footerEngName">المهندس باقر حيدر</strong></li>
+                        <li><a href="tel:+9647810531340" dir="ltr" class="phone-number"><bdi>+964 781 053 1340</bdi></a></li>
+                        <li><a href="tel:+9647800006252" dir="ltr" class="phone-number"><bdi>+964 780 000 6252</bdi></a></li>
+                        <li><a href="https://www.instagram.com/stg.iq/" target="_blank" style="color: #F472B6;"><svg width="13" height="13" fill="currentColor" viewBox="0 0 16 16" style="vertical-align: middle; margin-inline-end: 5px;"><path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a5.108 5.108 0 1 0 0 10.216 5.108 5.108 0 0 0 0-10.216zm0 1.441a3.667 3.667 0 1 1 0 7.334 3.667 3.667 0 0 1 0-7.334z"/></svg> <span data-i18n="footerIg">انستغرام: @stg.iq</span></a></li>
+                        <li><a href="mailto:baqergg@gmail.com">baqergg@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div data-i18n="footerCopy">
+                    &copy; 2026 مجموعة صلاح التقنية (Salah Tech Group - STG). جميع الحقوق محفوظة.
+                </div>
+                <div data-i18n="footerDev">
+                    تطوير وتصميم: <strong>المهندس باقر حيدر</strong>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Sticky Action Bar -->
+    <div class="mobile-action-bar">
+        <div class="mobile-action-bar-inner">
+            <a href="tel:+9647810531340" style="background: var(--blue-primary); color: #FFF;">
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/></svg>
+                <span data-i18n="mobileCall">اتصال هاتفي</span>
+            </a>
+            <a href="https://wa.me/9647810531340" target="_blank" style="background: #25D366; color: #FFF;">
+                <span data-i18n="mobileWa">محادثة واتساب</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Lightbox Modal for System Screenshots -->
+    <div class="lightbox-modal" id="lightboxModal">
+        <div class="lightbox-dialog">
+            <div class="lightbox-header">
+                <h3 class="lightbox-title" id="lightboxTitle" data-i18n="lightboxTitleDefault">معاينة النظام</h3>
+                <div style="display: flex; gap: 10px; align-items: center;">
+                    <button class="btn-secondary" id="btnLightboxPrev" style="padding: 4px 10px;">&#10094;</button>
+                    <button class="btn-secondary" id="btnLightboxNext" style="padding: 4px 10px;">&#10095;</button>
+                    <button class="btn-close-lightbox" aria-label="Close Lightbox">&times;</button>
+                </div>
+            </div>
+            <div class="lightbox-img-wrap">
+                <img id="lightboxImg" src="" alt="System Preview">
+            </div>
+            <div class="lightbox-footer">
+                <div class="lightbox-caption" id="lightboxCaption">شرح الواجهة</div>
+                <a href="https://wa.me/9647810531340" target="_blank" class="btn-primary" style="padding: 6px 14px; font-size: 0.85rem;">
+                    <span data-i18n="lightboxBtnRequest">طلب هذا البرنامج</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="assets/js/simulators.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

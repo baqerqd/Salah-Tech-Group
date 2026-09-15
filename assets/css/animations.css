@@ -1,0 +1,111 @@
+/* animations.css - Salah Tech Group */
+
+@keyframes floatSlow {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-12px) rotate(1deg); }
+}
+
+@keyframes pulseGlow {
+    0%, 100% {
+        box-shadow: 0 0 15px rgba(212, 175, 55, 0.2), inset 0 0 15px rgba(0, 173, 181, 0.1);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(212, 175, 55, 0.45), inset 0 0 25px rgba(0, 173, 181, 0.25);
+    }
+}
+
+@keyframes cyanPulse {
+    0%, 100% {
+        box-shadow: 0 0 10px rgba(0, 173, 181, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 25px rgba(0, 173, 181, 0.7);
+    }
+}
+
+@keyframes radarSweep {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes borderBeam {
+    100% {
+        offset-distance: 100%;
+    }
+}
+
+/* Animation utility classes */
+.animate-float {
+    animation: floatSlow 6s ease-in-out infinite;
+}
+
+.animate-glow {
+    animation: pulseGlow 4s ease-in-out infinite;
+}
+
+.animate-cyan-pulse {
+    animation: cyanPulse 2.5s ease-in-out infinite;
+}
+
+.gradient-text {
+    background: linear-gradient(135deg, #FFF9D2 0%, #D4AF37 50%, #9A7B1C 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.gradient-cyan-text {
+    background: linear-gradient(135deg, #E0F7FA 0%, #00ADB5 60%, #00FFF0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.gradient-silver-text {
+    background: linear-gradient(135deg, #FFFFFF 0%, #CBD5E1 50%, #94A3B8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Reveal on scroll base */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Glassmorphism Classes */
+.glass-panel {
+    background: rgba(16, 23, 38, 0.7);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-gold {
+    background: rgba(18, 22, 34, 0.75);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(212, 175, 55, 0.25);
+}
+
+.glass-panel-cyan {
+    background: rgba(13, 27, 42, 0.75);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(0, 173, 181, 0.25);
+}

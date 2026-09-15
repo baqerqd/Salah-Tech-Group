@@ -1,0 +1,6 @@
+{
+  "name": "مجموعة صلاح التقنية | STG",
+  "description": "الحلول التقنية المتكاملة وأنظمة مراقبة منصات حفر آبار النفط وأتمتة الـ PLC وجباية الإيرادات والمبيعات والأقساط",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
